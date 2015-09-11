@@ -1,0 +1,28 @@
+
+
+
+
+#continer
+{
+	width: 800px;
+	height: 480px;
+	background-image: url('../img/1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+	margin: 200px auto;
+}
+
+#continer > div
+{
+	background-image: url('../img/1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 10%;
+	transition-property: transform,opacity;
+	transition-duration: 0.5s;
+	
+}
+
