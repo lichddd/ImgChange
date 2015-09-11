@@ -9,12 +9,18 @@
 	background-image: url('../img/1.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	perspective: 1000px;
-	transform-style: preserve-3d;
+ 	perspective: 1000px;
+	/*transform-style: preserve-3d;*/
 	margin: 200px auto;
 }
-
-#continer >div > div
+#continer >.imgchanger_continer
+{
+ z-index: 100;
+ 	/*perspective: 1000px;*/
+	transform-style: preserve-3d;
+	
+}
+#continer >.imgchanger_continer > div
 {
 	background-image: url('../img/1.jpg');
 	background-repeat: no-repeat;
@@ -25,4 +31,29 @@
 	transition-duration: 0.5s;
 	
 }
+.imgchanger_pager
+{
+  position: absolute;
+  bottom: 5px;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  z-index: 1000;
+}
+.imgchanger_pager > div
+{
+  background-color: white;
+  height: 5px;
 
+  float: left;
+  margin: 5px;
+  cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: 0.5s;
+
+}
+.imgchanger_pager > div:hover
+{
+  box-shadow: 0px 0px 4px 5px rgba(1,1,1,0.5);
+
+}
