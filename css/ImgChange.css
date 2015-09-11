@@ -14,7 +14,7 @@
 	margin: 200px auto;
 }
 
-#continer > div
+#continer >div > div
 {
 	background-image: url('../img/1.jpg');
 	background-repeat: no-repeat;
