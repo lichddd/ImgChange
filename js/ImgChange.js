@@ -40,7 +40,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
     for (var i = 0; i < this.imgarr.length; i++) {
     	this.$pager.append("<div style='width: "+ 90/this.imgarr.length +"%;margin:"+5/this.imgarr.length+"%'></div>");
     }
-    self=this;
+    var self=this;
     this.$pager.children('div').on('click',function () {
     	
     	self.jumpin(self.$pager.children('div').index($(this)));
@@ -56,7 +56,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
 	
 	
 	ImgChanger.prototype.run = function() {
-		self=this;
+		var self=this;
 		this.$progress.animate({width:'100%'},this.changetime,function () {
 			self.$progress.css('width','0%');
 //			self.$progress.animate({width:'0%'},0);
@@ -75,7 +75,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
 	
 
 	ImgChanger.prototype.pre = function() {
-		self=this;
+		var self=this;
 		this.houkou="hitari"
 			self.mychange();
 
@@ -83,7 +83,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
 		
 	}
 	ImgChanger.prototype.next = function() {
-		self=this;
+		var self=this;
 		this.houkou="migi"
 			self.mychange();
 
@@ -124,14 +124,14 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
 //			temp.animate({transform:'translateZ(300px)'},'500');
 			self.arr.push(temp);
 			temp.css('transform','translateZ(300px)');
-			console.log(temp);
+//			console.log(temp);
 			
 			
 		}, index*50);
 		setTimeout(function() {
 //			temp.animate({opacity:'0'},250);
 			temp.css('opacity','0');
-			console.log(temp);
+//			console.log(temp);
 			
 			
 		}, index*50+250);
@@ -202,14 +202,14 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
 //			temp.animate({transform:'translateZ(300px)'},'500');
 			self.arr.push(temp);
 			temp.css('transform','translateZ(300px)');
-			console.log(temp);
+//			console.log(temp);
 			
 			
 		}, index*50);
 		setTimeout(function() {
 //			temp.animate({opacity:'0'},250);
 			temp.css('opacity','0');
-			console.log(temp);
+//			console.log(temp);
 			
 			
 		}, index*50+250);
@@ -268,14 +268,14 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
 //			temp.animate({transform:'translateZ(300px)'},'500');
 			self.arr.push(temp);
 			temp.css('transform','translateZ(0px)');
-			console.log(temp);
+//			console.log(temp);
 			
 			
 		}, index*50);
 		setTimeout(function() {
 //			temp.animate({opacity:'0'},250);
 			temp.css('opacity','1');
-			console.log(temp);
+//			console.log(temp);
 			
 			
 		}, index*50);
